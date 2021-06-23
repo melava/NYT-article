@@ -1,0 +1,702 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: nyt-imperial, georgia, "times new roman", times, serif;
+}
+
+.NYTlogo {
+    height: 44px;
+    line-height: 66px;
+    max-width: 195px;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    margin: 0 2px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(86, 123, 149);
+    color: white;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: rgb(50, 104, 145);
+}
+
+        /* FIGURES */
+figure {
+    margin: 43px 0;
+}
+
+.main-fig {
+    margin-top: 5px;
+}
+
+figure > * {
+    width: 100%;
+}
+
+figure > figcaption {
+    width: 75%;
+    color: rgb(102, 102, 102);
+    line-height: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.sec-fig > figcaption {
+    width: calc(100% - 20px);
+}
+
+figure > figcaption > .credit {
+    font-size: 13px;
+    color: rgb(136, 136, 136);
+}
+
+.iframe-container {
+    position: relative;
+    /* 16:9 aspect ratio */
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+  
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+/* SOCIAL MEDIA BAR */
+.footer-social {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+
+.social-bar {
+    display: flex;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    align-items: center;
+}
+
+.comment-button > button {
+    width: 330px;
+}
+
+.social-bar > li {
+    width: 25px;
+    background-color: #e2e2e2;
+    border: 1px solid #e2e2e2;
+    border-radius: 100%;
+    margin-right: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.social-bar > li:hover {
+    background-color: inherit;
+}
+
+.social-bar > li.comment {
+    position: relative;
+    left: 16px;
+    border: none;
+    background-color: inherit;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+li.comment:hover {
+    color: #e2e2e2;
+}
+
+li.comment::after {
+    content: '615';
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 12px;
+    line-height: 23px;
+}
+
+li.comment:hover::after {
+    color: black;
+}
+
+.footer-social .social-bar li:last-of-type {
+    margin-right: 0;
+}
+
+/* SITE HEADER */
+body > header {
+    width: calc(100% - 30px);
+    height: 45px;
+    position: fixed;
+    padding: 0 15px;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: white;
+    z-index: 1000;
+}
+
+body > header > nav {
+    display: grid;
+    grid-template: 45px / repeat(3, 1fr);
+    justify-items: start;
+    align-items: center;
+}
+
+#menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -10px;
+}
+
+#menu-bar > div {
+    padding: 12px 16px;
+}
+
+.current-section {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+body > header > nav > .NYTlogo {
+    justify-self: center;
+}
+
+#account {
+    justify-self: end;
+    position: relative;
+}
+
+#account > i {
+    display: none;
+}
+
+/* ARTICLE */
+
+article {
+    display: grid;
+    grid-template: auto / 1fr 1200px 1fr;
+    gap: 16px;
+    padding-top: 45px;
+    font-family: nyt-imperial, georgia, "times new roman", times, serif;
+}
+
+article > * {
+    grid-column-start: 2 ;
+}
+
+        /* ARTICLE HEADER */
+article > header {
+    display: grid;
+    grid-template: auto / 1fr 600px 1fr;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+article > header > * {
+    grid-column-start: 2 ;
+}
+
+article > header > h1 {
+    font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
+    font-size: 40px;
+    font-style: italic;
+    margin: 60px 0 0 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+
+
+article > header > figure {
+    grid-column: 1 / span 3;
+}
+
+article > header > .info {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+}
+
+article > header > .info > .author {
+    font-weight: 700;
+    margin: 0px 0 15px;
+}
+
+article > header > .info > .author > a {
+    color: inherit;
+    text-decoration: underline 1px solid #ccc;
+}
+
+article > header > .info > .author > a:hover {
+    text-decoration: none;
+}
+
+article > header > .info > .date {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+        /* ARTICLE BODY */
+article > main {
+    display: grid;
+    grid-template: auto / 1fr 60px 600px 60px 1fr;
+    font-size: 15px;
+}
+
+article > main > * {
+    display: contents;
+}
+
+article > main > section > * {
+    grid-column-start: 3 ;
+}
+
+article > main p, article > main h2 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+article > main .sec-fig {
+    grid-column: 2 / span 3;
+}
+
+
+        /* ARTICLE FOOTER */
+article > footer {
+    /* grid-area: ft; */
+    display: grid;
+    grid-template: auto / 1fr 600px 1fr;
+    gap: 20px;
+    font-size: 15px;
+}
+
+article > footer > * {
+    grid-column-start: 2 ;
+}
+
+article > footer > .edition {
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+}
+
+/* WEBSITE FOOTER - OTHER ARTICLES */
+body > footer {
+    display: grid;
+    grid-template: auto / 1fr minmax(auto, 1200px) 1fr;
+    margin-top: 45px;
+}
+
+body > footer > .articles {
+    grid-column-start: 2 ;
+    display: grid;
+    grid-template: auto auto auto / 5fr 2fr;
+    grid-template-areas: 
+        "sgtd pop"
+        "more pop"
+        "edp pop";
+    gap: 40px 30px;
+    border-bottom: 2px solid #e2e2e2;
+    margin-bottom: 1px;
+}
+
+footer .col3-section {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 18px;
+    border-top: 1px solid black;
+}
+
+footer .suggested {
+    grid-area: sgtd;
+}
+
+footer .more-articles {
+    grid-area: more;
+}
+
+footer .editors-picks {
+    grid-area: edp;
+}
+
+footer .popular {
+    grid-area: pop;
+    display: grid;
+    grid-template: auto / 1fr;
+    gap: 18px;
+    align-content: start;
+    border-top: 1px solid black;
+}
+
+.col3-section .footer-section-title {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h3 {
+    font-size: 16px;
+    margin: 15px 0 0 0;
+}
+
+.suggested .footer-section-title p {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    margin: 3px 0 0 0;
+}
+
+.suggested .newsletters {
+    border: 1px solid #e2e2e2;
+    padding: 15px;
+    position: relative;
+}
+
+.newsletters:hover {
+    box-shadow: 0px 3px 7px #e2e2e2 ;
+}
+
+.newsletters .pic {
+    width: 33%;
+}
+
+.newsletters .add {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 800;
+    line-height: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.newsletters:hover .add {
+    background-color: black;
+    color: white;
+}
+
+.newsletters .label {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.newsletters .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.newsletters .content {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.newsletters .link {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    color: rgb(50, 104, 145);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.col3-section .article:nth-child(2) {
+    margin-bottom: 40px;
+}
+
+.col3-section .article .credit {
+    color: rgb(153, 153, 153);
+    font-size: 10px;
+    text-align: right;
+}
+
+.col3-section .article .title, .popular .headlines {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: nyt-imperial, georgia, "times new roman", times, serif;
+}
+
+.col3-section .article .date {
+    color: rgb(153, 153, 153);
+    font-size: 12px; 
+}
+
+.popular .headlines {
+    margin: 0;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 18px;
+}
+
+footer .title:hover, .headlines:hover {
+    color: rgb(102, 102, 102);
+}
+
+
+/* FOOTER NAV MENU */
+
+body > footer > nav {
+    grid-column-start: 2 ;
+    border-top: 1px solid #e2e2e2;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+}
+
+footer > nav > .main-nav > .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-nav .title .homepage {
+    color: rgb(86, 123, 149);
+    font-size: 11px;
+}
+
+footer > nav .menu {
+    display: grid;
+    grid-template: auto / repeat(5, 1fr) calc(16.5% + 16px);
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+footer .menu ul li {
+    height: 25px;
+    font-size: 13px;
+}
+    
+footer > nav .menu .section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+footer > nav .menu .special {
+    border-left: 1px solid rgb(226, 226, 226);
+    padding-left: 15px;
+}
+
+footer nav .special .logo-list li {
+    height: 26.5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer nav .special .logo-list svg {
+    width: 13px
+}
+
+footer nav .special .small-list {
+    margin-top: 10px
+}
+
+footer nav .special .small-list.first {
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+footer nav .small-list li {
+    height: 23px;
+    font-size: 11px;
+}
+
+footer > nav > .secundary-nav, footer > nav > .secundary-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .secundary-nav .copyright li {
+    padding: 9px 0;
+}
+
+footer .secundary-nav li {
+    padding: 9px 8px;
+    color: rgb(51, 51, 51);
+}
+
+@media (max-width: 1440px) {
+    article {
+        grid-template: auto / 1fr 945px 1fr;
+    }
+
+    article > main {
+        grid-template: auto / 1fr 600px 1fr;
+    }
+
+    article > main > section > * {
+        grid-column-start: 2;
+    }
+
+    article > main .sec-fig {
+        grid-column: 2 / span 1;
+    }   
+}
+
+@media (max-width: 1200px) {
+    body > footer {
+        grid-template: auto / 3% auto 3%;
+    }
+
+    footer > nav > .secundary-nav {
+        flex-flow: column;
+    }
+
+    footer nav .small-list li {
+        font-size: 11px;
+    }
+
+    footer .secundary-nav .copyright li {
+        padding: 9px 0 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    .suggested .newsletters {
+        grid-column: span 3;
+    }
+
+    .newsletters .pic {
+        float: left;
+        width: 82px;
+        margin-right: 15px;
+    }
+
+    footer > nav .menu {
+        grid-template: auto / 1fr;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    
+    footer nav ul {
+        border-top: 1px solid rgb(226, 226, 226)
+    }
+
+    footer nav .secundary-nav ul {
+        border-top: none;
+        padding-top: 9px;
+    }
+
+    footer nav .secundary-nav ul li {
+        padding: 0 8px;
+    }
+
+    footer .menu ul li, footer > nav .menu .special{
+        display: none;
+    }
+
+    footer .menu ul li {
+        height: 44px;
+        line-height: 44px;
+    }
+
+    footer .menu ul li.section-title{
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    body > header {
+        position: inherit;
+    }
+
+    .search-bar, .current-section {
+        display: none;
+    }
+
+    #account > i {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+    }
+
+    #account > button {
+        display: inline-block;
+        color: rgb(86, 123, 149);
+        font-size: 9.5px;
+        background-color: inherit;
+        border: none;
+        margin: 0;
+        padding: 0 5px;
+        position: relative;
+        top: 35px;
+    }
+
+    #account > button:first-of-type {
+        border-right: 1px solid #e2e2e2;
+        border-radius: inherit;
+    }
+
+    article {
+        grid-template: auto / 1fr;
+        gap: 16px 0
+    }
+
+    .main-fig figcaption {
+        margin-left: 20px;
+        max-width: 900px;
+        width: calc(100% - 80px);
+    }
+
+    footer .col3-section {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 18px;
+        border-top: 1px solid black;
+    }
+
+    .col3-section .footer-section-title {
+        grid-column: span 2;
+    }
+
+    .col3-section .article:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    .col3-section.editors-picks .article:nth-child(4), .col3-section .article:nth-child(6), .col3-section .article:nth-child(7) {
+        display: none;
+    }
+}
+
+@media (max-width: 740px) {
+    img {
+        max-width: 740px;
+    }
+    
+    article > main p, article > main h2 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    body > footer > .articles {
+        grid-template-areas: "sgtd sgtd" "more more" "edp edp";
+    }
+
+    footer .popular {
+        display: none;
+    }
+}
